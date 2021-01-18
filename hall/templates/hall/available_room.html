@@ -1,0 +1,19 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
+
+<div class="row col-12">
+
+{%for room in available_rooms%}
+  <div class="card col-3">
+    <img class="card-img-top" src="https://images.pexels.com/photos/20787/pexels-photo.jpg?cs=srgb&dl=adorable-animal-cat-20787.jpg&fm=jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title text-center">{{room.name}}</h5>
+      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+      <a href="{%url 'confirm_booking' room.id%}" class="btn btn-primary text-center">Book </a>
+    </div>
+  </div>
+
+{%endfor%}
+</div>
+{%endblock%}

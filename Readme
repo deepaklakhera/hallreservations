@@ -1,0 +1,27 @@
+A simple Hall Reservation App using Django and DRF.
+
+All requirement details are in requirements.txt
+
+Concept used:
+ -MVT architecture
+ -Class based Views and Functional Based Views
+ -Django signals
+ -Django Sessions
+ -Forms
+ -Django templates
+ -Serializers
+
+
+List all Halls present: http://127.0.0.1:8000/hall/
+Form for Booking a hall and will show the available halls: http://127.0.0.1:8000/hall/book
+Then,User will get get a list of halls that are available for the booking at a specific time.
+User will click on Book and id of hall be sent for booking a hall and all will be booked.
+"http://127.0.0.1:8000/hall/confirm_book/1"
+Response:"Booking confirmed for HallA from 2021-01-21T16:10:00+05:30 to 2021-01-21T17:10:00+05:30"
+
+api for listing all halls: http://127.0.0.1:8000/api/halls
+api for listing all bookings: http://127.0.0.1:8000/api/booking
+api for creating a booking: http://127.0.0.1:8000/api/createBooking
+
+Note: I am busy with my office work so have not implemented login/logout so You can create a superuser using  "python manage.py createsuperuser" and check the functionalities.
+Also.this applications in just to show the functionality in django So,didn't spend lot of time in designing the app.

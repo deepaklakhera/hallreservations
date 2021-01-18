@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
+
+<div class="row col-12">
+<a href="{%url 'BookingView' %}">Book a Hall</a>
+
+<h4 style="text-align: center;">List of all Halls</h4>
+{%for obj in object_list%}
+  <div class="card col-3">
+    <img class="card-img-top" src="https://st.depositphotos.com/1006832/3908/i/950/depositphotos_39082047-stock-photo-interior-of-training-room.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title text-center">{{obj.name}}</h5>
+      
+    </div>
+  </div>
+
+{%endfor%}
+
+</div>
+
+
+
+{%endblock%}

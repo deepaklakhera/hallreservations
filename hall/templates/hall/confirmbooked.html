@@ -1,0 +1,7 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<p>Booking confirmed for {{hallname}} from {{check_in}} to {{check_out}}</p>
+<a href={%url 'BookingView' %}>Another Booking</a>
+<a href={%url 'HallListView' %}>Home</a>
+{%endblock%}
